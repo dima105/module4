@@ -1,18 +1,30 @@
-﻿using System;
-public class Exercise39
-{
-    public static void Main()
-    {
-        int i = 200;
-        Console.Write("Числа между 200 и 500, которые делятся на 17 : \n");
-        while (i < 500) 
+﻿ int i = 200;
+bool firstValue = true ;
+Console.Write("Числа между 200 и 500, которые делятся на 17 : \n");
+while (i < 500)
 
+{
+    
+    if (i % 17 == 0 )
+       
+    {
+
+
+        if (firstValue)
         {
-            i++;
-            if (i % 17 == 0)
-            {
-                Console.Write("{0} , ", i);
-            }
+            Console.Write(i);
+            firstValue = false;
+
+
         }
+       
+        else 
+        {
+            
+            Console.Write(" , {0}", i);
+        }
+       
     }
+    i++;
+
 }
